@@ -40,10 +40,7 @@ var webpackConfig = {
       {test: /\.styl$/, loader: "style-loader!css-loader?modules!stylus-loader"},
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
-        loaders: [
-          "file",
-          "image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false"
-        ]
+        loaders: [ "file" ]
       },
       {test: /\.mp3/, loader: "file"},
       {test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader?mimetype=application/font-woff"},

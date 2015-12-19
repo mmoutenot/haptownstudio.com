@@ -6,6 +6,7 @@ import {
   Link,
   Redirect
 }                           from "react-router";
+
 import ApplicationContainer from "app/views/containers/application_container";
 import HomeContainer        from "app/views/home";
 

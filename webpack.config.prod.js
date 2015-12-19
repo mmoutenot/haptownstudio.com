@@ -37,7 +37,7 @@ var webpackConfig = {
         test: /\.(jpe?g|png|gif|svg)$/i,
         loaders: [
           "file",
-          "image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false"
+          "image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=true&progressive=true"
         ]
       },
       {test: /\.mp3/, loader: "file"},
