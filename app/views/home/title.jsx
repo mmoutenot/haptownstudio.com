@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+
 import classNames from "./styles";
 
 const CLIENTS = [
@@ -16,6 +17,7 @@ const CLIENTS = [
   "Blake Brown",
   "Jeff The Brotherhood"
 ]
+
 
 export default class Title extends Component {
   constructor (props) {

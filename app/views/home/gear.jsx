@@ -3,7 +3,6 @@ import Slider from "react-slick";
 
 import classNames from "./styles";
 
-
 const GEAR = [
   "Soundcraft Console 48x8x2",
   "Studer 2 track 1/2\"",
@@ -34,6 +33,7 @@ const BACKGROUNDS = [
   require("app/assets/images/Piano.jpg"),
   require("app/assets/images/Piano2.jpg")
 ]
+
 
 export default class Gear extends Component {
   constructor (props) {
