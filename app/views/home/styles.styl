@@ -1,0 +1,84 @@
+.titlePage, .rogerPage, .gearPage
+  height 80vh
+  position relative
+  background-size cover
+  background-position center
+
+.titlePage
+  background-image url("app/assets/images/Entrance.jpg")
+
+  .titleContainer
+    display flex
+    align-items center
+    justify-content center
+    flex-direction column
+    position absolute
+    height 100%
+    width 100%
+
+  h1
+    font-size 8rem
+
+  h2
+    font-size 2.5rem
+    color white
+    text-shadow 0 .2rem .8rem black
+
+  .spotifyPlayer
+    position fixed
+    top 1rem
+    right 1rem
+    z-index 100
+    border none
+    box-shadow 0 .2rem .8rem black
+
+.rogerPage
+  background-image url("app/assets/images/Roger.jpg")
+  box-shadow inset 0 -13rem 10em rgba(black, .8)
+
+  .contentContainer
+    position absolute
+    left 4rem
+    right 4rem
+    bottom 2rem
+
+  h1
+    color white
+
+  p
+    color white
+
+.gearPage
+  .slider
+    z-index -1
+    position absolute
+    top 0
+    left 0
+    max-height 100%
+    width 100%
+
+    .sliderImage
+      height 80vh
+      width 100%
+      background-size cover
+      background-position center
+
+  .overlay
+    position absolute
+    height 100%
+    width 100%
+    box-shadow inset 18rem -14rem 18em rgba(black, .8)
+
+  .gearList
+    position absolute
+    bottom 4rem
+    left 4rem
+
+  h2
+    color white
+
+  ul
+    padding 0
+    li
+      list-style-type none
+      color white
