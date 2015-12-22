@@ -47,7 +47,7 @@ export default class Gear extends Component {
 
     let sliderOptions = {
       className: classNames.slider,
-      arrows: true,
+      arrows: false,
       autoplay: true,
       infinite: true,
       speed: 3000,
