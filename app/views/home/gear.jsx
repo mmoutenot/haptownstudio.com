@@ -3,23 +3,44 @@ import Slider from "react-slick";
 
 import classNames from "./styles";
 
-const GEAR = [
-  "Soundcraft Console 48x8x2",
-  "Studer 2 track 1/2\"",
-  "Otari 24 track 2\"",
-  "Pro Tools HD 11",
-  "Neve 6 channels mic-pre",
-  "API 6 channels mic-pre",
-  "API 312  4 channels mic-pre",
-  "Shadow Hill 1 channel mic-pre",
-  "Chandler 1 channel mic-pre",
-  "Flickinger 1 channel mic-pre",
-  "Distresser compressor",
-  "API 550 compressor",
-  "DBX compressor",
-  "EMT 140 plate",
-  "Lots of drums, organs, pianos, and guitars"
-]
+
+const MAIN_GEAR = [
+  "48 Channel Soundcraft Ghost",
+  "Otari MTR 90 24 trk",
+  "Studer 2 trk",
+  "Protools 11",
+  "Barefoot, B&W and Yamaha NS 10 monitors",
+  "EMT plate reverb and spring verbs"
+];
+
+const MIC_PRES = [
+  "Wonder Audio",
+  "API 512",
+  "API 312",
+  "Helios",
+  "Electrodyne",
+  "Burl",
+  "Flickenger",
+  "Neve ",
+  "Shadow Hills",
+  "Chandler"
+];
+
+const COMPRESSORS = [
+  "API 512",
+  "Empirical lab Distressers",
+  "Retro Sta Level",
+  "Dangerous Audio",
+  "Inward Connection ",
+  "DBX"
+];
+
+const INSTRUMENTS = [
+  "Various Drum sets ",
+  "Hammond Organs B3, M100",
+  "Wurlitzer, Rhodes, Vox Jaguar, Baldwin piano, vibraphone ",
+  "And various Synths "
+];
 
 const BACKGROUNDS = [
   require("app/assets/images/Devices.jpg"),
@@ -30,10 +51,8 @@ const BACKGROUNDS = [
   require("app/assets/images/Lamp.jpg"),
   require("app/assets/images/Drumset.jpg"),
   require("app/assets/images/Chairs.jpg"),
-  require("app/assets/images/Piano.jpg"),
-  require("app/assets/images/Piano2.jpg")
-]
-
+  require("app/assets/images/Piano.jpg")
+];
 
 export default class Gear extends Component {
   constructor (props) {
@@ -50,7 +69,7 @@ export default class Gear extends Component {
       arrows: false,
       autoplay: true,
       infinite: true,
-      speed: 3000,
+      speed: 4000,
       slidesToShow: 1,
       slidesToScroll: 1,
       centerMode: true,
@@ -68,12 +87,37 @@ export default class Gear extends Component {
         )}
       </Slider>
       <div className={classNames.gearList}>
-        <h2>Gear</h2>
+        <h2>Studio Gear</h2>
         <ul>
-          {GEAR.map((gearItem, i) =>
+          {MAIN_GEAR.map((gearItem, i) =>
             <li key={i}>{gearItem}</li>
           )}
         </ul>
+
+        <h3>Mic Pres</h3>
+        <ul>
+          {MIC_PRES.map((gearItem, i) =>
+            <li key={i}>{gearItem}</li>
+          )}
+        </ul>
+
+        <h3>Compressors</h3>
+        <ul>
+          {COMPRESSORS.map((gearItem, i) =>
+            <li key={i}>{gearItem}</li>
+          )}
+        </ul>
+
+        <h3>Microphones</h3>
+        <ul><li>Assortment of condenser, ribbons, and dynamics</li></ul>
+
+        <h3>Instruments</h3>
+        <ul>
+          {INSTRUMENTS.map((gearItem, i) =>
+            <li key={i}>{gearItem}</li>
+          )}
+        </ul>
+
       </div>
     </div>
   }
