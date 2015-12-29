@@ -42,6 +42,7 @@
     "file-loader": "0.8.4",
     "html-webpack-plugin": "1.6.0",
     "image-webpack-loader": "^1.6.2",
+    "instafeed.js": "^1.4.1",
     "json-loader": "0.5.2",
     "null-loader": "0.1.1",
     "react-hot-loader": "1.2.8",

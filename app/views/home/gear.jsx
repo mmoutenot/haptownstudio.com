@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import Slider from "react-slick";
+import Instafeed from "instafeed.js";
 
 import classNames from "./styles";
 
@@ -43,6 +44,9 @@ const INSTRUMENTS = [
 ];
 
 const BACKGROUNDS = [
+  require("app/assets/images/Rack.jpg"),
+  require("app/assets/images/Guitars.jpg"),
+  require("app/assets/images/Barefoot.jpg"),
   require("app/assets/images/Devices.jpg"),
   require("app/assets/images/Mixer.jpg"),
   require("app/assets/images/Mixer Close.jpg"),
@@ -51,12 +55,25 @@ const BACKGROUNDS = [
   require("app/assets/images/Lamp.jpg"),
   require("app/assets/images/Drumset.jpg"),
   require("app/assets/images/Chairs.jpg"),
-  require("app/assets/images/Piano.jpg")
+  require("app/assets/images/Piano.jpg"),
+  require("app/assets/images/Pingpong.jpg")
 ];
 
 export default class Gear extends Component {
   constructor (props) {
     super(props);
+
+    // let feed = new Instafeed({
+    //   clientId: "f0ddb53904da4196b40d29b126117404",
+    //   accessToken: "188346280.f0ddb53.111f63cdd4704f019f95b47063181a82",
+    //   get: "user",
+    //   userId: "1753031531",
+    //   resolution: "standard_resolution",
+    //   success: (results) => {
+    //     debugger;
+    //   }
+    // }).run();
+
     this.state = {
       backgroundIndex: 0
     };
@@ -69,7 +86,8 @@ export default class Gear extends Component {
       arrows: false,
       autoplay: true,
       infinite: true,
-      speed: 4000,
+      speed: 5000,
+      autoplaySpeed: 5000,
       slidesToShow: 1,
       slidesToScroll: 1,
       centerMode: true,

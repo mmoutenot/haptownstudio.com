@@ -52,10 +52,21 @@ export default class Title extends Component {
     ), 2000);
   }
 
+  componentDidMount () {
+    onscroll = () => {
+      this.setState({ scrollPosition: window.scrollY })
+    };
+  }
+
   render () {
     let currentClient = CLIENTS[this.state.clientIndex];
-    let playlistUrl = "https://embed.spotify.com/?uri=spotify%3Auser%3A1217133103%3Aplaylist%3A6UsD02k8btjmNn7UH4NQUH";
+    let playlistUrl = "https://embed.spotify.com/?uri=spotify%3Auser%3A12169845727%3Aplaylist%3A5VUu0mJPL6PEG3EZCd9nV6";
     let spotifyDims = { width: 300, height: 80 };
+    let width = document.body.getBoundingClientRect().width;
+
+    if (width > 1200 && this.state.scrollPosition < 800) {
+      spotifyDims.height = 380;
+    }
 
     return <div className={classNames.titlePage}>
       <div className={classNames.titleContainer}>
